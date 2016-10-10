@@ -1,0 +1,92 @@
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe.config
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.pdb
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddPrice.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddEmp.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditEmp.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Employee.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditPrice.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Form1.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Price.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Properties.Resources.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.csproj.GenerateResource.Cache
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.exe
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.pdb
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Car.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddCar.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditCar.resources
+C:\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.DeletedPack.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe.config
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.exe
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.pdb
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.pdb
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\ResolveAssemblyReference.cache
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddPrice.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddEmp.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Car.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddCar.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.DeletedPack.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditCar.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditEmp.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Employee.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditPrice.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Form1.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Price.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Properties.Resources.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.csproj.GenerateResource.Cache
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClass.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClassAnnotation.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fADDSERV.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fAddAS.resources
+C:\Windows.old\Users\Corps\Documents\Visual Studio 2008\Projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fEditAS.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe.config
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.exe
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.pdb
+d:\projects\old.projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe
+d:\projects\old.projects\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.pdb
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\ResolveAssemblyReference.cache
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddPrice.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddEmp.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Car.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddCar.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClassAnnotation.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.DeletedPack.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fEditAS.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditCar.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditEmp.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Employee.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditPrice.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fAddAS.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fADDSERV.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClass.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Form1.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Price.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Properties.Resources.resources
+d:\projects\old.projects\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.csproj.GenerateResource.Cache
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe.config
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.exe
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.pdb
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.exe
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\bin\Debug\CWMAdmin.pdb
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\ResolveAssemblyReference.cache
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddPrice.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddEmp.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Car.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.AddCar.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClassAnnotation.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.ChangePassword.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.DeletedPack.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fEditAS.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditCar.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditEmp.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Employee.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.EditPrice.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fAddAS.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fADDSERV.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.fChangeClass.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Form1.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Price.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.Properties.Resources.resources
+d:\projects\CarWashManager\CWMAdmin\CWMAdmin\obj\Debug\CWMAdmin.csproj.GenerateResource.Cache

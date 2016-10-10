@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{953E919C-201F-42AA-A8FE-A34AE7DEE300}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWMAdmin</RootNamespace>
+    <AssemblyName>CWMAdmin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrice.Designer.cs">
+      <DependentUpon>AddPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmp.Designer.cs">
+      <DependentUpon>AddEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car.Designer.cs">
+      <DependentUpon>Car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeClassAnnotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeClassAnnotation.Designer.cs">
+      <DependentUpon>ChangeClassAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassworf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassworf.Designer.cs">
+      <DependentUpon>ChangePassworf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletedPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletedPack.Designer.cs">
+      <DependentUpon>DeletedPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAS.Designer.cs">
+      <DependentUpon>EditAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCar.Designer.cs">
+      <DependentUpon>EditCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmp.Designer.cs">
+      <DependentUpon>EditEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPrice.Designer.cs">
+      <DependentUpon>EditPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWMEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CWMEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="fAddAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddAS.Designer.cs">
+      <DependentUpon>fAddAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fADDSERV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fADDSERV.Designer.cs">
+      <DependentUpon>fADDSERV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChangeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChangeClass.Designer.cs">
+      <DependentUpon>fChangeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price.Designer.cs">
+      <DependentUpon>Price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPrice.resx">
+      <DependentUpon>AddPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmp.resx">
+      <DependentUpon>AddEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car.resx">
+      <DependentUpon>Car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeClassAnnotation.resx">
+      <DependentUpon>ChangeClassAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassworf.resx">
+      <DependentUpon>ChangePassworf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletedPack.resx">
+      <DependentUpon>DeletedPack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAS.resx">
+      <DependentUpon>EditAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCar.resx">
+      <DependentUpon>EditCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmp.resx">
+      <DependentUpon>EditEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPrice.resx">
+      <DependentUpon>EditPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddAS.resx">
+      <DependentUpon>fAddAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fADDSERV.resx">
+      <DependentUpon>fADDSERV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChangeClass.resx">
+      <DependentUpon>fChangeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price.resx">
+      <DependentUpon>Price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="CWMEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CWMEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

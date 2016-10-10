@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CWMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="CWMModelStoreContainer">
+          <EntitySet Name="CAR" EntityType="CWMModel.Store.CAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CARCLASS" EntityType="CWMModel.Store.CARCLASS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EMPLOYEE" EntityType="CWMModel.Store.EMPLOYEE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JOB" EntityType="CWMModel.Store.JOB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LINE" EntityType="CWMModel.Store.LINE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PACKAGE" EntityType="CWMModel.Store.PACKAGE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PRICELIST" EntityType="CWMModel.Store.PRICELIST" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JOBVIEW" EntityType="CWMModel.Store.JOBVIEW" store:Type="Views" store:Schema="dbo" store:Name="JOBVIEW">
+            <DefiningQuery>SELECT 
+      [JOBVIEW].[EMP] AS [EMP], 
+      [JOBVIEW].[PLATE] AS [PLATE], 
+      [JOBVIEW].[T] AS [T], 
+      [JOBVIEW].[PS] AS [PS], 
+      [JOBVIEW].[CAR] AS [CAR], 
+      [JOBVIEW].[COST] AS [COST], 
+      [JOBVIEW].[EMP2] AS [EMP2], 
+      [JOBVIEW].[PLATE2] AS [PLATE2], 
+      [JOBVIEW].[T2] AS [T2], 
+      [JOBVIEW].[PS2] AS [PS2], 
+      [JOBVIEW].[CAR2] AS [CAR2], 
+      [JOBVIEW].[COST2] AS [COST2]
+      FROM [dbo].[JOBVIEW] AS [JOBVIEW]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="CAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IDCLASS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARCLASS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ANNOTATION" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ENAME" Type="nvarchar(max)" />
+          <Property Name="DELETED" Type="bit" />
+        </EntityType>
+        <EntityType Name="JOB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDEMP" Type="int" Nullable="false" />
+          <Property Name="IDPACKAGE" Type="int" Nullable="false" />
+          <Property Name="JOBDATE" Type="datetime" Nullable="false" />
+          <Property Name="TOTALCOST" Type="int" Nullable="false" />
+          <Property Name="LINE" Type="int" Nullable="false" />
+          <Property Name="IDCLASS" Type="int" Nullable="false" />
+          <Property Name="NPLATE" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IDCAR" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LINE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LNAME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PACKAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDJOB" Type="int" Nullable="false" />
+          <Property Name="IDPRICE" Type="int" Nullable="false" />
+          <Property Name="COST" Type="int" Nullable="false" />
+          <Property Name="DELETED" Type="bit" />
+        </EntityType>
+        <EntityType Name="PRICELIST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PNAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="COST" Type="int" Nullable="false" />
+          <Property Name="IDCLASS" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CWM.dbo.JOBVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="JOBVIEW">
+          <Key>
+            <PropertyRef Name="EMP" />
+          </Key>
+          <Property Name="EMP" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PLATE" Type="nvarchar" MaxLength="50" />
+          <Property Name="T" Type="varchar" MaxLength="5" />
+          <Property Name="PS" Type="nvarchar(max)" />
+          <Property Name="CAR" Type="nvarchar(max)" />
+          <Property Name="COST" Type="int" />
+          <Property Name="EMP2" Type="nvarchar(max)" />
+          <Property Name="PLATE2" Type="nvarchar" MaxLength="50" />
+          <Property Name="T2" Type="varchar" MaxLength="5" />
+          <Property Name="PS2" Type="nvarchar(max)" />
+          <Property Name="CAR2" Type="nvarchar(max)" />
+          <Property Name="COST2" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CWMModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="CWMEntities">
+          <EntitySet Name="CAR" EntityType="CWMModel.CAR" />
+          <EntitySet Name="CARCLASS" EntityType="CWMModel.CARCLASS" />
+          <EntitySet Name="EMPLOYEE" EntityType="CWMModel.EMPLOYEE" />
+          <EntitySet Name="JOB" EntityType="CWMModel.JOB" />
+          <EntitySet Name="LINE" EntityType="CWMModel.LINE" />
+          <EntitySet Name="PACKAGE" EntityType="CWMModel.PACKAGE" />
+          <EntitySet Name="PRICELIST" EntityType="CWMModel.PRICELIST" />
+          <EntitySet Name="JOBVIEW" EntityType="CWMModel.JOBVIEW" />
+          </EntityContainer>
+        <EntityType Name="CAR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CNAME" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IDCLASS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CARCLASS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CNAME" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ANNOTATION" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ENAME" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DELETED" Type="Boolean" Nullable="true" /></EntityType>
+        <EntityType Name="JOB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="IDEMP" Type="Int32" Nullable="false" />
+          <Property Name="IDPACKAGE" Type="Int32" Nullable="false" />
+          <Property Name="JOBDATE" Type="DateTime" Nullable="false" />
+          <Property Name="TOTALCOST" Type="Int32" Nullable="false" />
+          <Property Name="LINE" Type="Int32" Nullable="false" />
+          <Property Name="IDCLASS" Type="Int32" Nullable="false" />
+          <Property Name="NPLATE" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IDCAR" Type="Int32" Nullable="false" />
+          </EntityType>
+        <EntityType Name="LINE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="LNAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PACKAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="IDJOB" Type="Int32" Nullable="false" />
+          <Property Name="IDPRICE" Type="Int32" Nullable="false" />
+          <Property Name="COST" Type="Int32" Nullable="false" />
+          <Property Name="DELETED" Type="Boolean" Nullable="true" /></EntityType>
+        <EntityType Name="PRICELIST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PNAME" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="COST" Type="Int32" Nullable="false" />
+          <Property Name="IDCLASS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JOBVIEW">
+          <Key>
+            <PropertyRef Name="EMP" />
+          </Key>
+          <Property Name="EMP" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="PLATE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="T" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PS" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CAR" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="COST" Type="Int32" />
+          <Property Name="EMP2" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="PLATE2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="T2" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PS2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CAR2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="COST2" Type="Int32" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="CWMModelStoreContainer" CdmEntityContainer="CWMEntities">
+          <EntitySetMapping Name="CAR">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.CAR)">
+              <MappingFragment StoreEntitySet="CAR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="IDCLASS" ColumnName="IDCLASS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARCLASS">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.CARCLASS)">
+              <MappingFragment StoreEntitySet="CARCLASS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+                <ScalarProperty Name="ANNOTATION" ColumnName="ANNOTATION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEE">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.EMPLOYEE)">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JOB">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.JOB)">
+              <MappingFragment StoreEntitySet="JOB">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDEMP" ColumnName="IDEMP" />
+                <ScalarProperty Name="IDPACKAGE" ColumnName="IDPACKAGE" />
+                <ScalarProperty Name="JOBDATE" ColumnName="JOBDATE" />
+                <ScalarProperty Name="TOTALCOST" ColumnName="TOTALCOST" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="IDCLASS" ColumnName="IDCLASS" />
+                <ScalarProperty Name="NPLATE" ColumnName="NPLATE" />
+                <ScalarProperty Name="IDCAR" ColumnName="IDCAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LINE">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.LINE)">
+              <MappingFragment StoreEntitySet="LINE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACKAGE">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.PACKAGE)">
+              <MappingFragment StoreEntitySet="PACKAGE">
+                <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDJOB" ColumnName="IDJOB" />
+                <ScalarProperty Name="IDPRICE" ColumnName="IDPRICE" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRICELIST">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.PRICELIST)">
+              <MappingFragment StoreEntitySet="PRICELIST">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PNAME" ColumnName="PNAME" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="IDCLASS" ColumnName="IDCLASS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JOBVIEW">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.JOBVIEW)">
+              <MappingFragment StoreEntitySet="JOBVIEW">
+                <ScalarProperty Name="EMP" ColumnName="EMP" />
+                <ScalarProperty Name="PLATE" ColumnName="PLATE" />
+                <ScalarProperty Name="T" ColumnName="T" />
+                <ScalarProperty Name="PS" ColumnName="PS" />
+                <ScalarProperty Name="CAR" ColumnName="CAR" />
+                <ScalarProperty Name="COST" ColumnName="COST" />
+                <ScalarProperty Name="EMP2" ColumnName="EMP2" />
+                <ScalarProperty Name="PLATE2" ColumnName="PLATE2" />
+                <ScalarProperty Name="T2" ColumnName="T2" />
+                <ScalarProperty Name="PS2" ColumnName="PS2" />
+                <ScalarProperty Name="CAR2" ColumnName="CAR2" />
+                <ScalarProperty Name="COST2" ColumnName="COST2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="CWMModel">
+        <EntityTypeShape EntityType="CWMModel.CAR" Width="1.5" PointX="0.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.CARCLASS" Width="1.5" PointX="2.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.EMPLOYEE" Width="1.5" PointX="0.75" PointY="3.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.JOB" Width="1.5" PointX="2.75" PointY="3" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.LINE" Width="1.5" PointX="4.75" PointY="0.75" Height="1.2636116536458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.PACKAGE" Width="1.5" PointX="4.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.PRICELIST" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.JOBVIEW" Width="1.5" PointX="6.75" PointY="3.75" Height="2.9070849609374996" IsExpanded="true" />
+        </Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
