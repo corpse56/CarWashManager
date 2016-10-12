@@ -21,6 +21,9 @@
     <br />
     <br />
     <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl = "~/Top10Services.aspx"  Font-Size = "X-Large">Десятка самых популярных услуг за всё время</asp:LinkButton>
+    <br />
+    <br />
+    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl = "~/Top10ServicesByPeriod.aspx"  Font-Size = "X-Large">Десятка самых популярных услуг за период</asp:LinkButton>
 
     </div>
     </form>

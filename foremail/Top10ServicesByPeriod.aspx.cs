@@ -11,40 +11,33 @@ using System.Web.UI.DataVisualization.Charting;
 
 namespace CarWashManager
 {
-    public partial class Top10Services : System.Web.UI.Page
+    public partial class Top10ServicesByPeriod : System.Web.UI.Page
     {
         SqlDataAdapter DA;
         DataSet DS;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            DA = new SqlDataAdapter();
-            DS = new DataSet();
-            DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
-            DA.SelectCommand.CommandText = "  select top 10 B.PNAME+' '+C.CNAME name,COUNT(IDPRICE) cnt "+
-                                            "  from CWM..PACKAGE A "+
-                                            "  left join CWM..PRICELIST B on A.IDPRICE=B.ID "+
-                                            "  left join CWM..CARCLASS C on C.ID = B.IDCLASS "+
-                                            "  where DELETED is null "+
-                                            "  group by B.PNAME+' '+C.CNAME " +
-                                            "  order by cnt desc         ";
-            DS = new DataSet();
-            DA.Fill(DS, "canc");
-            ShowChart1();
-            DA.SelectCommand.CommandText = "  select top 10 B.PNAME name,COUNT(IDPRICE) cnt " +
-                                "  from CWM..PACKAGE A " +
-                                "  left join CWM..PRICELIST B on A.IDPRICE=B.ID " +
-                                "  where DELETED is null " +
-                                "  group by B.PNAME " +
-                                "  order by cnt desc         ";
-            DS = new DataSet();
-            DA.Fill(DS, "canc2");
-            ShowChart2();
+            tbStart.Attributes.Add("readonly", "readonly");
+            tbEnd.Attributes.Add("readonly", "readonly");
+            if (!Page.IsPostBack)
+            {
+                CalendarExtender1.SelectedDate = DateTime.Today;
+                CalendarExtender2.SelectedDate = DateTime.Today;
+                tbStart.Text = DateTime.Today.ToString("dd.MM.yyyy");
+                tbEnd.Text = DateTime.Today.ToString("dd.MM.yyyy");
+            }
+            else
+            {
+                CalendarExtender1.SelectedDate = DateTime.ParseExact(tbStart.Text, CalendarExtender1.Format, null);
+                CalendarExtender2.SelectedDate = DateTime.ParseExact(tbEnd.Text, CalendarExtender2.Format, null);
+            }
         }
 
         private void ShowChart2()
         {
+            Chart2.Visible = true;
+
             double sum_all = 0;
             int cnt_all = 10;
 
@@ -103,6 +96,7 @@ namespace CarWashManager
         }
         private void ShowChart1()
         {
+            Chart1.Visible = true;
             double sum_all = 0;
             int cnt_all = 10;
 
@@ -158,6 +152,51 @@ namespace CarWashManager
             Chart1.ChartAreas["ChartArea1"].Visible = true;
             Chart1.Legends[0].Enabled = true;
             return;
+        }
+
+   
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (CalendarExtender1.SelectedDate > CalendarExtender2.SelectedDate)
+            {
+                ScriptManager.RegisterStartupScript(this.Button2, GetType(), "error", @"alert('Начальная дата не может быть больше конечной!!');location = ""Top10ServicesByPeriod.aspx""", true);
+                return;
+            }
+            if ((CalendarExtender1.SelectedDate == null) || (CalendarExtender2.SelectedDate == null))
+            {
+                ScriptManager.RegisterStartupScript(this.Button2, GetType(), "error", @"alert('Дата не может быть пустой!!');location = ""Top10ServicesByPeriod.aspx""", true);
+                return;
+            }
+
+            DA = new SqlDataAdapter();
+            DS = new DataSet();
+            DA.SelectCommand = new SqlCommand();
+            DA.SelectCommand.Parameters.AddWithValue("start", CalendarExtender1.SelectedDate);
+            DA.SelectCommand.Parameters.AddWithValue("end", CalendarExtender2.SelectedDate);
+
+            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.CommandText = "  select top 10 B.PNAME+' '+C.CNAME name,COUNT(IDPRICE) cnt " +
+                                            "  from CWM..PACKAGE A " +
+                                            "  left join CWM..PRICELIST B on A.IDPRICE=B.ID " +
+                                            "  left join CWM..CARCLASS C on C.ID = B.IDCLASS " +
+                                            "  left join CWM..JOB J on J.ID = A.IDJOB " +
+                                            "  where DELETED is null and J.JOBDATE between @start and @end " +
+                                            "  group by B.PNAME+' '+C.CNAME " +
+                                            "  order by cnt desc         ";
+            DS = new DataSet();
+            DA.Fill(DS, "canc");
+            ShowChart1();
+            DA.SelectCommand.CommandText = "  select top 10 B.PNAME name,COUNT(IDPRICE) cnt " +
+                                            "  from CWM..PACKAGE A " +
+                                            "  left join CWM..PRICELIST B on A.IDPRICE=B.ID " +
+                                            "  left join CWM..JOB J on J.ID = A.IDJOB " +
+                                            "  where DELETED is null and J.JOBDATE between @start and @end " +
+                                            "  group by B.PNAME " +
+                                            "  order by cnt desc ";
+            DS = new DataSet();
+            DA.Fill(DS, "canc2");
+            ShowChart2();
         }
     }
 }

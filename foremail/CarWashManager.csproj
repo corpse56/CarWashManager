@@ -97,11 +97,13 @@
     <Content Include="SearchReportShow.aspx" />
     <Content Include="ServReport.aspx" />
     <Content Include="ServReportShow.aspx" />
+    <Content Include="style\ajax_calendar_extender_style.css" />
     <Content Include="TeamReport.aspx" />
     <Content Include="TeamReportShow.aspx" />
     <Content Include="TeamReportShowShort.aspx" />
     <Content Include="TempImages\temp.txt" />
     <Content Include="Top10Services.aspx" />
+    <Content Include="Top10ServicesByPeriod.aspx" />
     <Content Include="TopMenu.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -335,6 +337,13 @@
     </Compile>
     <Compile Include="Top10Services.aspx.designer.cs">
       <DependentUpon>Top10Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top10ServicesByPeriod.aspx.cs">
+      <DependentUpon>Top10ServicesByPeriod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Top10ServicesByPeriod.aspx.designer.cs">
+      <DependentUpon>Top10ServicesByPeriod.aspx</DependentUpon>
     </Compile>
     <Compile Include="TopMenu.ascx.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>

@@ -21,7 +21,7 @@ namespace CarWashManager
         {
             SqlDataAdapter DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.CommandText = "select * from PASSWORD where LOGIN = '" + Login1.UserName.ToLower() + "' and lower(ADMINPASS) = '" + Login1.Password.ToLower() + "'";
 
             DataSet usr = new DataSet();

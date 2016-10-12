@@ -35,7 +35,7 @@ namespace CarWashManager
             DSD = new DataSet();
             DSPAD = new DataSet();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.CommandText = "select * from JOB where ID = " + Request["idj"];
             DA.Fill(DSJ, "J");
             /*string ch = DSJ.Tables[0].Rows[0]["PLUS_50"].ToString();
