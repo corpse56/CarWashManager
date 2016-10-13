@@ -23,7 +23,7 @@ namespace CarWashManager
             DA = new SqlDataAdapter();
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection("Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.Parameters.Add("start", SqlDbType.DateTime);
             DA.SelectCommand.Parameters.Add("end", SqlDbType.DateTime);
             DA.SelectCommand.Parameters.Add("serv", SqlDbType.NVarChar);

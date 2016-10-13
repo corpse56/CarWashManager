@@ -20,7 +20,7 @@ namespace CarWashManager
             DA = new SqlDataAdapter();
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection("Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.CommandText = "with price as " +
                 "(select distinct PNAME pn from CWM..PRICELIST) " +
                 "select A.pn pn,B.COST c1,C.COST c2,D.COST c3,E.COST c4,F.COST c5 from price A " +

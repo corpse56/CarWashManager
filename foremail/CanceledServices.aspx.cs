@@ -19,7 +19,7 @@ namespace CarWashManager
             DA = new SqlDataAdapter();
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection("Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.CommandText = "select top 1000 A.ID idp,B.ID id,B.JOBDATE jdate,C.ENAME emp,E.CNAME car,D.PNAME price,B.LINE line, B.IDCLASS idc," +
                     " B.NPLATE plate, A.COST cst" +
                     " from CWM..PACKAGE A" +

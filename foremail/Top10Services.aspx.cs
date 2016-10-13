@@ -21,7 +21,7 @@ namespace CarWashManager
             DA = new SqlDataAdapter();
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
-            DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1\SQL2008R2;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+            DA.SelectCommand.Connection = new SqlConnection("Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
             DA.SelectCommand.CommandText = "  select top 10 B.PNAME+' '+C.CNAME name,COUNT(IDPRICE) cnt "+
                                             "  from CWM..PACKAGE A "+
                                             "  left join CWM..PRICELIST B on A.IDPRICE=B.ID "+
