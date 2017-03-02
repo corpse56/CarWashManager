@@ -55,21 +55,25 @@ namespace CWMAdmin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             if (dgwDel.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Не выбрана ни одна строка!");
                 return;
             }
-            DA.DeleteCommand = new SqlCommand();
-            DA.DeleteCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
-            DA.DeleteCommand.CommandText = "delete from CWM..PACKAGE where ID = " + dgwDel.SelectedRows[0].Cells["idp"].Value.ToString();
-            DA.DeleteCommand.Connection.Open();
-            DA.DeleteCommand.ExecuteNonQuery();
-            DA.DeleteCommand.Connection.Close();
-            DeletedPack_Load(sender, e);
-            MessageBox.Show("Услуга удалена из удаленных услуг!");
+            foreach (DataGridViewRow row in dgwDel.SelectedRows)
+            {
+                DA.DeleteCommand = new SqlCommand();
+                DA.DeleteCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
+                DA.DeleteCommand.CommandText = "delete from CWM..REMOVEDJOB where ID = " + dgwDel.SelectedRows[0].Cells["id"].Value.ToString();
+                DA.DeleteCommand.Connection.Open();
+                DA.DeleteCommand.ExecuteNonQuery();
+                DA.DeleteCommand.Connection.Close();
+                dgwDel.Rows.Remove(row);
+            }
+            //DeletedPack_Load(sender, e);
+            MessageBox.Show("Выделенные задания удалены из удаленных заданий!");
         }
     }
 }
