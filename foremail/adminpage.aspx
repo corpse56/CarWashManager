@@ -17,7 +17,10 @@
             <asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click">Выход</asp:LinkButton> 
             </div>
              <br />
-    <asp:LinkButton ID="lbTime" runat="server" PostBackUrl = "~/CanceledServices.aspx"  Font-Size = "X-Large">Отменённые задания</asp:LinkButton>
+    <asp:LinkButton ID="lbTime" runat="server" PostBackUrl = "~/CanceledServices.aspx"  Font-Size = "X-Large">Отменённые услуги в задании</asp:LinkButton>
+    <br />
+    <br />
+    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl = "~/RemovedJobs.aspx"  Font-Size = "X-Large">Удалённые задания</asp:LinkButton>
     <br />
     <br />
     <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl = "~/Top10Services.aspx"  Font-Size = "X-Large">Десятка самых популярных услуг за всё время</asp:LinkButton>

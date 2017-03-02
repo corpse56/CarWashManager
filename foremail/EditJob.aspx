@@ -93,7 +93,7 @@
                 <asp:CheckBox ID="chbManual" runat="server" AutoPostBack="True"  Font-Size = "X-Large"
                     oncheckedchanged="chbManual_CheckedChanged" /><asp:TextBox ID="tbCar" 
                     runat="server" Enabled ="false"  Font-Size = "X-Large" 
-                     OnClick="chbManual.=''"></asp:TextBox>                
+                     ></asp:TextBox>                
             </td>
         </tr>
         <tr>

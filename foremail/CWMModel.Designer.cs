@@ -11,7 +11,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmSchemaAttribute()]
 
 // Original file name:
-// Generation date: 17.07.2015 15:52:01
+// Generation date: 02.03.2017 15:12:32
 namespace CarWashManager
 {
     
@@ -166,6 +166,21 @@ namespace CarWashManager
         }
         private global::System.Data.Objects.ObjectQuery<JOBVIEW> _JOBVIEW;
         /// <summary>
+        /// There are no comments for REMOVEDJOB in the schema.
+        /// </summary>
+        public global::System.Data.Objects.ObjectQuery<REMOVEDJOB> REMOVEDJOB
+        {
+            get
+            {
+                if ((this._REMOVEDJOB == null))
+                {
+                    this._REMOVEDJOB = base.CreateQuery<REMOVEDJOB>("[REMOVEDJOB]");
+                }
+                return this._REMOVEDJOB;
+            }
+        }
+        private global::System.Data.Objects.ObjectQuery<REMOVEDJOB> _REMOVEDJOB;
+        /// <summary>
         /// There are no comments for CAR in the schema.
         /// </summary>
         public void AddToCAR(CAR cAR)
@@ -220,6 +235,13 @@ namespace CarWashManager
         public void AddToJOBVIEW(JOBVIEW jOBVIEW)
         {
             base.AddObject("JOBVIEW", jOBVIEW);
+        }
+        /// <summary>
+        /// There are no comments for REMOVEDJOB in the schema.
+        /// </summary>
+        public void AddToREMOVEDJOB(REMOVEDJOB rEMOVEDJOB)
+        {
+            base.AddObject("REMOVEDJOB", rEMOVEDJOB);
         }
     }
     /// <summary>
@@ -1376,5 +1398,300 @@ namespace CarWashManager
         private global::System.Nullable<int> _COST2;
         partial void OnCOST2Changing(global::System.Nullable<int> value);
         partial void OnCOST2Changed();
+    }
+    /// <summary>
+    /// There are no comments for CWMModel.REMOVEDJOB in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ID
+    /// </KeyProperties>
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="CWMModel", Name="REMOVEDJOB")]
+    [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
+    [global::System.Serializable()]
+    public partial class REMOVEDJOB : global::System.Data.Objects.DataClasses.EntityObject
+    {
+        /// <summary>
+        /// Create a new REMOVEDJOB object.
+        /// </summary>
+        /// <param name="id">Initial value of ID.</param>
+        /// <param name="iDEMP">Initial value of IDEMP.</param>
+        /// <param name="iDPACKAGE">Initial value of IDPACKAGE.</param>
+        /// <param name="jOBDATE">Initial value of JOBDATE.</param>
+        /// <param name="tOTALCOST">Initial value of TOTALCOST.</param>
+        /// <param name="lINE">Initial value of LINE.</param>
+        /// <param name="iDCLASS">Initial value of IDCLASS.</param>
+        /// <param name="nPLATE">Initial value of NPLATE.</param>
+        /// <param name="iDCAR">Initial value of IDCAR.</param>
+        /// <param name="iDORIGINALJOB">Initial value of IDORIGINALJOB.</param>
+        /// <param name="dATEDELETED">Initial value of DATEDELETED.</param>
+        public static REMOVEDJOB CreateREMOVEDJOB(int id, int iDEMP, int iDPACKAGE, global::System.DateTime jOBDATE, int tOTALCOST, int lINE, int iDCLASS, string nPLATE, int iDCAR, int iDORIGINALJOB, global::System.DateTime dATEDELETED)
+        {
+            REMOVEDJOB rEMOVEDJOB = new REMOVEDJOB();
+            rEMOVEDJOB.ID = id;
+            rEMOVEDJOB.IDEMP = iDEMP;
+            rEMOVEDJOB.IDPACKAGE = iDPACKAGE;
+            rEMOVEDJOB.JOBDATE = jOBDATE;
+            rEMOVEDJOB.TOTALCOST = tOTALCOST;
+            rEMOVEDJOB.LINE = lINE;
+            rEMOVEDJOB.IDCLASS = iDCLASS;
+            rEMOVEDJOB.NPLATE = nPLATE;
+            rEMOVEDJOB.IDCAR = iDCAR;
+            rEMOVEDJOB.IDORIGINALJOB = iDORIGINALJOB;
+            rEMOVEDJOB.DATEDELETED = dATEDELETED;
+            return rEMOVEDJOB;
+        }
+        /// <summary>
+        /// There are no comments for Property ID in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID
+        {
+            get
+            {
+                return this._ID;
+            }
+            set
+            {
+                this.OnIDChanging(value);
+                this.ReportPropertyChanging("ID");
+                this._ID = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("ID");
+                this.OnIDChanged();
+            }
+        }
+        private int _ID;
+        partial void OnIDChanging(int value);
+        partial void OnIDChanged();
+        /// <summary>
+        /// There are no comments for Property IDEMP in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDEMP
+        {
+            get
+            {
+                return this._IDEMP;
+            }
+            set
+            {
+                this.OnIDEMPChanging(value);
+                this.ReportPropertyChanging("IDEMP");
+                this._IDEMP = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("IDEMP");
+                this.OnIDEMPChanged();
+            }
+        }
+        private int _IDEMP;
+        partial void OnIDEMPChanging(int value);
+        partial void OnIDEMPChanged();
+        /// <summary>
+        /// There are no comments for Property IDPACKAGE in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDPACKAGE
+        {
+            get
+            {
+                return this._IDPACKAGE;
+            }
+            set
+            {
+                this.OnIDPACKAGEChanging(value);
+                this.ReportPropertyChanging("IDPACKAGE");
+                this._IDPACKAGE = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("IDPACKAGE");
+                this.OnIDPACKAGEChanged();
+            }
+        }
+        private int _IDPACKAGE;
+        partial void OnIDPACKAGEChanging(int value);
+        partial void OnIDPACKAGEChanged();
+        /// <summary>
+        /// There are no comments for Property JOBDATE in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.DateTime JOBDATE
+        {
+            get
+            {
+                return this._JOBDATE;
+            }
+            set
+            {
+                this.OnJOBDATEChanging(value);
+                this.ReportPropertyChanging("JOBDATE");
+                this._JOBDATE = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("JOBDATE");
+                this.OnJOBDATEChanged();
+            }
+        }
+        private global::System.DateTime _JOBDATE;
+        partial void OnJOBDATEChanging(global::System.DateTime value);
+        partial void OnJOBDATEChanged();
+        /// <summary>
+        /// There are no comments for Property TOTALCOST in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int TOTALCOST
+        {
+            get
+            {
+                return this._TOTALCOST;
+            }
+            set
+            {
+                this.OnTOTALCOSTChanging(value);
+                this.ReportPropertyChanging("TOTALCOST");
+                this._TOTALCOST = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("TOTALCOST");
+                this.OnTOTALCOSTChanged();
+            }
+        }
+        private int _TOTALCOST;
+        partial void OnTOTALCOSTChanging(int value);
+        partial void OnTOTALCOSTChanged();
+        /// <summary>
+        /// There are no comments for Property LINE in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int LINE
+        {
+            get
+            {
+                return this._LINE;
+            }
+            set
+            {
+                this.OnLINEChanging(value);
+                this.ReportPropertyChanging("LINE");
+                this._LINE = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("LINE");
+                this.OnLINEChanged();
+            }
+        }
+        private int _LINE;
+        partial void OnLINEChanging(int value);
+        partial void OnLINEChanged();
+        /// <summary>
+        /// There are no comments for Property IDCLASS in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDCLASS
+        {
+            get
+            {
+                return this._IDCLASS;
+            }
+            set
+            {
+                this.OnIDCLASSChanging(value);
+                this.ReportPropertyChanging("IDCLASS");
+                this._IDCLASS = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("IDCLASS");
+                this.OnIDCLASSChanged();
+            }
+        }
+        private int _IDCLASS;
+        partial void OnIDCLASSChanging(int value);
+        partial void OnIDCLASSChanged();
+        /// <summary>
+        /// There are no comments for Property NPLATE in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public string NPLATE
+        {
+            get
+            {
+                return this._NPLATE;
+            }
+            set
+            {
+                this.OnNPLATEChanging(value);
+                this.ReportPropertyChanging("NPLATE");
+                this._NPLATE = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
+                this.ReportPropertyChanged("NPLATE");
+                this.OnNPLATEChanged();
+            }
+        }
+        private string _NPLATE;
+        partial void OnNPLATEChanging(string value);
+        partial void OnNPLATEChanged();
+        /// <summary>
+        /// There are no comments for Property IDCAR in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDCAR
+        {
+            get
+            {
+                return this._IDCAR;
+            }
+            set
+            {
+                this.OnIDCARChanging(value);
+                this.ReportPropertyChanging("IDCAR");
+                this._IDCAR = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("IDCAR");
+                this.OnIDCARChanged();
+            }
+        }
+        private int _IDCAR;
+        partial void OnIDCARChanging(int value);
+        partial void OnIDCARChanged();
+        /// <summary>
+        /// There are no comments for Property IDORIGINALJOB in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDORIGINALJOB
+        {
+            get
+            {
+                return this._IDORIGINALJOB;
+            }
+            set
+            {
+                this.OnIDORIGINALJOBChanging(value);
+                this.ReportPropertyChanging("IDORIGINALJOB");
+                this._IDORIGINALJOB = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("IDORIGINALJOB");
+                this.OnIDORIGINALJOBChanged();
+            }
+        }
+        private int _IDORIGINALJOB;
+        partial void OnIDORIGINALJOBChanging(int value);
+        partial void OnIDORIGINALJOBChanged();
+        /// <summary>
+        /// There are no comments for Property DATEDELETED in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.DateTime DATEDELETED
+        {
+            get
+            {
+                return this._DATEDELETED;
+            }
+            set
+            {
+                this.OnDATEDELETEDChanging(value);
+                this.ReportPropertyChanging("DATEDELETED");
+                this._DATEDELETED = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("DATEDELETED");
+                this.OnDATEDELETEDChanged();
+            }
+        }
+        private global::System.DateTime _DATEDELETED;
+        partial void OnDATEDELETEDChanging(global::System.DateTime value);
+        partial void OnDATEDELETEDChanged();
     }
 }

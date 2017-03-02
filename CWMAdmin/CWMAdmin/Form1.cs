@@ -79,5 +79,11 @@ namespace CWMAdmin
             ChangePassword cp = new ChangePassword();
             cp.ShowDialog();
         }
+
+        private void удалённыеЗаданияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeletedJobs dj = new DeletedJobs();
+            dj.ShowDialog();
+        }
     }
 }

@@ -35,13 +35,14 @@
             this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.автомобилиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удаленныеЗаданияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.задатьПарольПанелиАдминистратораToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очисткаТаблицToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьВсеЗаданияЗаВсёВремяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.классАвтомобиляToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.переименоватьКлассыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.задатьПарольПанелиАдминистратораToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалённыеЗаданияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.сотрудникиToolStripMenuItem,
             this.автомобилиToolStripMenuItem,
             this.удаленныеЗаданияToolStripMenuItem,
+            this.удалённыеЗаданияToolStripMenuItem,
             this.задатьПарольПанелиАдминистратораToolStripMenuItem,
             this.toolStripSeparator1,
             this.выходToolStripMenuItem});
@@ -105,8 +107,15 @@
             // 
             this.удаленныеЗаданияToolStripMenuItem.Name = "удаленныеЗаданияToolStripMenuItem";
             this.удаленныеЗаданияToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
-            this.удаленныеЗаданияToolStripMenuItem.Text = "Удаленные задания";
+            this.удаленныеЗаданияToolStripMenuItem.Text = "Отменённые услуги из задания";
             this.удаленныеЗаданияToolStripMenuItem.Click += new System.EventHandler(this.удаленныеЗаданияToolStripMenuItem_Click);
+            // 
+            // задатьПарольПанелиАдминистратораToolStripMenuItem
+            // 
+            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Name = "задатьПарольПанелиАдминистратораToolStripMenuItem";
+            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Text = "Задать пароль панели администратора";
+            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Click += new System.EventHandler(this.задатьПарольПанелиАдминистратораToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -150,12 +159,12 @@
             this.переименоватьКлассыToolStripMenuItem.Text = "Переименовать классы";
             this.переименоватьКлассыToolStripMenuItem.Click += new System.EventHandler(this.переименоватьКлассыToolStripMenuItem_Click);
             // 
-            // задатьПарольПанелиАдминистратораToolStripMenuItem
+            // удалённыеЗаданияToolStripMenuItem
             // 
-            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Name = "задатьПарольПанелиАдминистратораToolStripMenuItem";
-            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
-            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Text = "Задать пароль панели администратора";
-            this.задатьПарольПанелиАдминистратораToolStripMenuItem.Click += new System.EventHandler(this.задатьПарольПанелиАдминистратораToolStripMenuItem_Click);
+            this.удалённыеЗаданияToolStripMenuItem.Name = "удалённыеЗаданияToolStripMenuItem";
+            this.удалённыеЗаданияToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.удалённыеЗаданияToolStripMenuItem.Text = "Удалённые задания";
+            this.удалённыеЗаданияToolStripMenuItem.Click += new System.EventHandler(this.удалённыеЗаданияToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -195,6 +204,7 @@
         private System.Windows.Forms.ToolStripMenuItem переименоватьКлассыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дополнительныеУслугиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem задатьПарольПанелиАдминистратораToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалённыеЗаданияToolStripMenuItem;
     }
 }
 

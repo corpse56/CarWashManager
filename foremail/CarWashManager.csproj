@@ -92,6 +92,7 @@
     <Content Include="GenReportShow.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Price.aspx" />
+    <Content Include="RemovedJobs.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="SearchReport.aspx" />
     <Content Include="SearchReportShow.aspx" />
@@ -211,6 +212,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RAddServ.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemovedJobs.aspx.cs">
+      <DependentUpon>RemovedJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemovedJobs.aspx.designer.cs">
+      <DependentUpon>RemovedJobs.aspx</DependentUpon>
     </Compile>
     <Compile Include="RGeneral.cs">
       <AutoGen>True</AutoGen>

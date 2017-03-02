@@ -11,7 +11,7 @@
 namespace CarWashManager {
     
     
-    public partial class adminpage {
+    public partial class RemovedJobs {
         
         /// <summary>
         /// form1 control.
@@ -32,48 +32,21 @@ namespace CarWashManager {
         protected global::CarWashManager.TopMenu TopMenu1;
         
         /// <summary>
-        /// LinkButton3 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lbTime control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbTime;
-        
-        /// <summary>
-        /// LinkButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
-        
-        /// <summary>
-        /// LinkButton2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
-        
-        /// <summary>
-        /// LinkButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

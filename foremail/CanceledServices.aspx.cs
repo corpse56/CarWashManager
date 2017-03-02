@@ -27,7 +27,7 @@ namespace CarWashManager
                     "  left join CWM..EMPLOYEE C on C.ID = B.IDEMP" +
                     " left join CWM..PRICELIST D on A.IDPRICE = D.ID" +
                     " left join CWM..CAR E on B.IDCAR = E.ID" +
-                    "  where A.DELETED = 1 order by B.JOBDATE desc";
+                    "  where A.DELETED = 1 and B.ID is not null order by B.JOBDATE desc";
             DS = new DataSet();
             DA.Fill(DS, "canc");
 

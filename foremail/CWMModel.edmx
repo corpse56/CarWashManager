@@ -13,6 +13,7 @@
           <EntitySet Name="LINE" EntityType="CWMModel.Store.LINE" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PACKAGE" EntityType="CWMModel.Store.PACKAGE" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PRICELIST" EntityType="CWMModel.Store.PRICELIST" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="REMOVEDJOB" EntityType="CWMModel.Store.REMOVEDJOB" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="JOBVIEW" EntityType="CWMModel.Store.JOBVIEW" store:Type="Views" store:Schema="dbo" store:Name="JOBVIEW">
             <DefiningQuery>SELECT 
       [JOBVIEW].[EMP] AS [EMP], 
@@ -94,6 +95,22 @@
           <Property Name="COST" Type="int" Nullable="false" />
           <Property Name="IDCLASS" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="REMOVEDJOB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDEMP" Type="int" Nullable="false" />
+          <Property Name="IDPACKAGE" Type="int" Nullable="false" />
+          <Property Name="JOBDATE" Type="datetime" Nullable="false" />
+          <Property Name="TOTALCOST" Type="int" Nullable="false" />
+          <Property Name="LINE" Type="int" Nullable="false" />
+          <Property Name="IDCLASS" Type="int" Nullable="false" />
+          <Property Name="NPLATE" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IDCAR" Type="int" Nullable="false" />
+          <Property Name="IDORIGINALJOB" Type="int" Nullable="false" />
+          <Property Name="DATEDELETED" Type="datetime" Nullable="false" />
+        </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'CWM.dbo.JOBVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
@@ -127,7 +144,7 @@
           <EntitySet Name="PACKAGE" EntityType="CWMModel.PACKAGE" />
           <EntitySet Name="PRICELIST" EntityType="CWMModel.PRICELIST" />
           <EntitySet Name="JOBVIEW" EntityType="CWMModel.JOBVIEW" />
-          </EntityContainer>
+          <EntitySet Name="REMOVEDJOB" EntityType="CWMModel.REMOVEDJOB" /></EntityContainer>
         <EntityType Name="CAR">
           <Key>
             <PropertyRef Name="ID" />
@@ -207,7 +224,20 @@
           <Property Name="CAR2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="COST2" Type="Int32" />
         </EntityType>
-        </Schema>
+        <EntityType Name="REMOVEDJOB">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="IDEMP" Type="Int32" Nullable="false" />
+          <Property Name="IDPACKAGE" Type="Int32" Nullable="false" />
+          <Property Name="JOBDATE" Type="DateTime" Nullable="false" />
+          <Property Name="TOTALCOST" Type="Int32" Nullable="false" />
+          <Property Name="LINE" Type="Int32" Nullable="false" />
+          <Property Name="IDCLASS" Type="Int32" Nullable="false" />
+          <Property Name="NPLATE" Type="String" Nullable="false" />
+          <Property Name="IDCAR" Type="Int32" Nullable="false" />
+          <Property Name="IDORIGINALJOB" Type="Int32" Nullable="false" />
+          <Property Name="DATEDELETED" Type="DateTime" Nullable="false" /></EntityType></Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -302,7 +332,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+          <EntitySetMapping Name="REMOVEDJOB">
+            <EntityTypeMapping TypeName="IsTypeOf(CWMModel.REMOVEDJOB)">
+              <MappingFragment StoreEntitySet="REMOVEDJOB">
+                <ScalarProperty Name="DATEDELETED" ColumnName="DATEDELETED" />
+                <ScalarProperty Name="IDORIGINALJOB" ColumnName="IDORIGINALJOB" />
+                <ScalarProperty Name="IDCAR" ColumnName="IDCAR" />
+                <ScalarProperty Name="NPLATE" ColumnName="NPLATE" />
+                <ScalarProperty Name="IDCLASS" ColumnName="IDCLASS" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="TOTALCOST" ColumnName="TOTALCOST" />
+                <ScalarProperty Name="JOBDATE" ColumnName="JOBDATE" />
+                <ScalarProperty Name="IDPACKAGE" ColumnName="IDPACKAGE" />
+                <ScalarProperty Name="IDEMP" ColumnName="IDEMP" />
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
@@ -321,7 +364,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="CWMModel">
-        <EntityTypeShape EntityType="CWMModel.CAR" Width="1.5" PointX="0.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CWMModel.CAR" Width="1.5" PointX="0.75" PointY="0.75" Height="1.6156835937500005" IsExpanded="true" />
         <EntityTypeShape EntityType="CWMModel.CARCLASS" Width="1.5" PointX="2.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
         <EntityTypeShape EntityType="CWMModel.EMPLOYEE" Width="1.5" PointX="0.75" PointY="3.75" Height="1.2636116536458335" IsExpanded="true" />
         <EntityTypeShape EntityType="CWMModel.JOB" Width="1.5" PointX="2.75" PointY="3" Height="2.7494921874999996" IsExpanded="true" />
@@ -329,6 +372,6 @@
         <EntityTypeShape EntityType="CWMModel.PACKAGE" Width="1.5" PointX="4.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
         <EntityTypeShape EntityType="CWMModel.PRICELIST" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5923063151041665" IsExpanded="true" />
         <EntityTypeShape EntityType="CWMModel.JOBVIEW" Width="1.5" PointX="6.75" PointY="3.75" Height="2.9070849609374996" IsExpanded="true" />
-        </Diagram></edmx:Diagrams>
+        <EntityTypeShape EntityType="CWMModel.REMOVEDJOB" Width="1.5" PointX="0.75" PointY="6.75" Height="2.9417936197916674" /></Diagram></edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

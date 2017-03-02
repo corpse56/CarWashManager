@@ -91,6 +91,12 @@
     <Compile Include="ChangePassworf.Designer.cs">
       <DependentUpon>ChangePassworf.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeletedJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletedJobs.Designer.cs">
+      <DependentUpon>DeletedJobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeletedPack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassworf.resx">
       <DependentUpon>ChangePassworf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletedJobs.resx">
+      <DependentUpon>DeletedJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletedPack.resx">
       <DependentUpon>DeletedPack.cs</DependentUpon>

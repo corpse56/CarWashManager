@@ -10,12 +10,12 @@ using System.Data.SqlClient;
 
 namespace CWMAdmin
 {
-    public partial class DeletedPack : Form
+    public partial class DeletedJobs : Form
     {
 
         SqlDataAdapter DA;
         DataSet DS;
-        public DeletedPack()
+        public DeletedJobs()
         {
             InitializeComponent();
         }
@@ -26,19 +26,15 @@ namespace CWMAdmin
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
             DA.SelectCommand.Connection = new SqlConnection(@"Data Source=127.0.0.1;Initial Catalog=CWM;Persist Security Info=True;User ID=CWM;Password=manager");
-            DA.SelectCommand.CommandText = "select A.ID idp,B.ID id,B.JOBDATE jdate,C.ENAME emp,E.CNAME car,D.PNAME price,B.LINE line, B.IDCLASS idc," +
-                    " B.NPLATE plate, A.COST cst" +
-                    " from CWM..PACKAGE A" +
-                    " left join CWM..JOB B on A.IDJOB = B.ID" +
-                    "  left join CWM..EMPLOYEE C on C.ID = B.IDEMP" +
-                    " left join CWM..PRICELIST D on A.IDPRICE = D.ID" +
-                    " left join CWM..CAR E on B.IDCAR = E.ID"+
-                    "  where A.DELETED = 1 and B.ID is not null";
+            DA.SelectCommand.CommandText = "select top 1000 A.IDORIGINALJOB id,A.JOBDATE jdate,C.ENAME emp,E.CNAME car,A.LINE line, A.IDCLASS idc," +
+                    " A.NPLATE plate, A.TOTALCOST cst, A.DATEDELETED deldate" +
+                    " from CWM..REMOVEDJOB A" +
+                    "  left join CWM..EMPLOYEE C on C.ID = A.IDEMP" +
+                    " left join CWM..CAR E on A.IDCAR = E.ID" +
+                    "  order by A.DATEDELETED desc";
             int i = DA.Fill(DS, "R");
             dgwDel.DataSource = DS.Tables["R"];
 
-            dgwDel.Columns["idp"].Visible = false;
-            dgwDel.Columns["id"].Width = 100;
             dgwDel.Columns["id"].HeaderText = "Номер работы";
             dgwDel.Columns["jdate"].Width = 150;
             dgwDel.Columns["jdate"].HeaderText = "Дата";
@@ -46,8 +42,6 @@ namespace CWMAdmin
             dgwDel.Columns["emp"].HeaderText = "Сотрудник";
             dgwDel.Columns["car"].Width = 150;
             dgwDel.Columns["car"].HeaderText = "Автомобиль";
-            dgwDel.Columns["price"].Width = 150;
-            dgwDel.Columns["price"].HeaderText = "Услуга";
             dgwDel.Columns["line"].Width = 70;
             dgwDel.Columns["line"].HeaderText = "Линия";
             dgwDel.Columns["idc"].Width = 70;
@@ -56,6 +50,8 @@ namespace CWMAdmin
             dgwDel.Columns["plate"].HeaderText = "Гос. номер";
             dgwDel.Columns["cst"].Width = 100;
             dgwDel.Columns["cst"].HeaderText = "Стоимость";
+            dgwDel.Columns["deldate"].Width = 150;
+            dgwDel.Columns["deldate"].HeaderText = "Дата удаления";
 
         }
 

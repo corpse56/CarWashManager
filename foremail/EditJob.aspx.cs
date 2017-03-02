@@ -584,15 +584,31 @@ namespace CarWashManager
                     JOB delj = (from jj in cwm.JOB
                                 where jj.ID == IDJOB
                                 select jj).First();
+
+                    REMOVEDJOB REMJ = new REMOVEDJOB();
+                    REMJ.IDORIGINALJOB = delj.ID;
+                    REMJ.IDCAR = delj.IDCAR;
+                    REMJ.IDCLASS = delj.IDCLASS;
+                    REMJ.IDEMP = delj.IDEMP;
+                    REMJ.IDPACKAGE = delj.IDPACKAGE;
+                    REMJ.JOBDATE = delj.JOBDATE;
+                    REMJ.LINE = delj.LINE;
+                    REMJ.NPLATE = delj.NPLATE;
+                    REMJ.TOTALCOST = delj.TOTALCOST;
+                    REMJ.DATEDELETED = DateTime.Now;
+
+                    cwm.AddToREMOVEDJOB(REMJ);
+                    cwm.SaveChanges();
+
                     cwm.DeleteObject(delj);
 
-                    var delpack = from pp in cwm.PACKAGE
-                                  where pp.IDJOB == IDJOB
-                                  select pp;
-                    foreach (PACKAGE pack in delpack)
-                    {
-                        cwm.DeleteObject(pack);
-                    }
+                    //var delpack = from pp in cwm.PACKAGE
+                    //              where pp.IDJOB == IDJOB
+                    //              select pp;
+                    //foreach (PACKAGE pack in delpack)
+                    //{
+                    //    cwm.DeleteObject(pack);
+                    //}
 
                     //var delpackadd = from pp in cwm.PACKAGEADDSERV
                     //              where pp.IDJOB == IDJOB
