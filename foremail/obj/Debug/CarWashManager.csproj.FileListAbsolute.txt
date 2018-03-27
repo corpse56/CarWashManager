@@ -13,3 +13,8 @@ D:\projects\cwm\CarWashManager\foremail\bin\CarWashManager.pdb
 D:\projects\cwm\CarWashManager\foremail\obj\Debug\ResolveAssemblyReference.cache
 D:\projects\cwm\CarWashManager\foremail\obj\Debug\CarWashManager.dll
 D:\projects\cwm\CarWashManager\foremail\obj\Debug\CarWashManager.pdb
+F:\projects\haltura\carwm\carwashmanager\foremail\bin\CarWashManager.dll
+F:\projects\haltura\carwm\carwashmanager\foremail\bin\CarWashManager.pdb
+F:\projects\haltura\carwm\carwashmanager\foremail\obj\Debug\ResolveAssemblyReference.cache
+F:\projects\haltura\carwm\carwashmanager\foremail\obj\Debug\CarWashManager.dll
+F:\projects\haltura\carwm\carwashmanager\foremail\obj\Debug\CarWashManager.pdb

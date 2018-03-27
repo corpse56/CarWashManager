@@ -36,6 +36,9 @@
     <br />
     <br />
     <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl = "~/FullReport.aspx"  Font-Size = "X-Large">Полный отчёт</asp:LinkButton>
+    <br />
+    <br />
+    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl = "~/CarsReport.aspx"  Font-Size = "X-Large">Отчёт по автомобилям</asp:LinkButton>
 
     </form>
 </body>

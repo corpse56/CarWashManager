@@ -83,6 +83,7 @@
     <Content Include="AddServReportShow.aspx" />
     <Content Include="adminpage.aspx" />
     <Content Include="CanceledServices.aspx" />
+    <Content Include="CarsReport.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Edit.aspx" />
     <Content Include="EditJob.aspx" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="CanceledServices.aspx.designer.cs">
       <DependentUpon>CanceledServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarsReport.aspx.cs">
+      <DependentUpon>CarsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarsReport.aspx.designer.cs">
+      <DependentUpon>CarsReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
