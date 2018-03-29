@@ -101,7 +101,7 @@
                 <asp:Label ID="Label7" runat="server" Text="Отметьте заказанные услуги" Font-Size = "X-Large"></asp:Label>
             </td>
             <td>
-                <asp:CheckBoxList ID="chblPrice" runat="server" Font-Size = "X-Large" 
+                <asp:CheckBoxList ID="chblPrice" runat="server" Font-Size = "X-Large" Enabled = "false"
                     Height="180px" onselectedindexchanged="chblPrice_SelectedIndexChanged" AutoPostBack = "true">
                 </asp:CheckBoxList>
             </td>
@@ -112,7 +112,7 @@
             </td>
             <td>
                 <asp:CheckBoxList ID="chblAddServ" runat="server" Font-Size = "X-Large" 
-                    Height="180px"  AutoPostBack = "true" 
+                    Height="180px"  AutoPostBack = "true"  
                     onselectedindexchanged="chblAddServ_SelectedIndexChanged">
                 </asp:CheckBoxList>
             </td>
@@ -132,7 +132,7 @@
             </td>
             <td>
                 <div style = "float:right"><asp:Button ID="bDelete" runat="server" Text="Удалить текущую работу" Font-Size = "X-Large"
-                OnClick = "OnConfirm" OnClientClick = "Confirm()"   /></div>
+                OnClick = "OnConfirm" OnClientClick = "Confirm()" Enabled = "false"   /></div>
             </td>
         </tr>
     </table>

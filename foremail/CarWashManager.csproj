@@ -108,6 +108,7 @@
     <Content Include="Top10ServicesByPeriod.aspx" />
     <Content Include="TopMenu.ascx" />
     <Content Include="Web.config" />
+    <Content Include="AddJobStep2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddJob.aspx.cs">
@@ -367,6 +368,13 @@
     </Compile>
     <Compile Include="TopMenu.ascx.designer.cs">
       <DependentUpon>TopMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddJobStep2.aspx.cs">
+      <DependentUpon>AddJobStep2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddJobStep2.aspx.designer.cs">
+      <DependentUpon>AddJobStep2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

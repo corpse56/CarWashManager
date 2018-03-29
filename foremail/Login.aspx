@@ -15,16 +15,21 @@
     <br />
     <br />
     <center>
-     <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/adminpage.aspx" 
+        <asp:Label ID="Label1" runat="server" Text="Введите пароль:  " Font-Size="X-Large"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" TextMode ="Password" Font-Size="X-Large"></asp:TextBox>
+        <br /><br />
+        <asp:Button ID="Button1" runat="server" Text="Войти" Font-Size="X-Large" 
+            onclick="Button1_Click"/>
+     <%--<asp:Login ID="Login1" runat="server" DestinationPageUrl="~/adminpage.aspx" 
         DisplayRememberMe="False" Font-Size="X-Large" ForeColor="Black" Height="110px" 
         LoginButtonText="Войти" OnAuthenticate="Login1_Authenticate" 
         PasswordLabelText="Пароль:" RememberMeText="" TitleText="Авторизация" 
-        UserNameLabelText="Логин :" 
+        UserNameLabelText="Логин :"  
         UserNameRequiredErrorMessage="Поле &quot;Логин&quot; является обязательным." 
         Width="500px">
          <TextBoxStyle Font-Size="XX-Large" Font-Underline="False" />
          <LoginButtonStyle Font-Size="XX-Large" Height="50px" Width="100px" />
-    </asp:Login>
+    </asp:Login>--%>
     </center>
     </div>
     </form>

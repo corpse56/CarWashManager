@@ -18,7 +18,7 @@ namespace CarWashManager
         {
             bAdd.Attributes.Add("onclick", " this.disabled = true; " + ClientScript.GetPostBackEventReference(bAdd, null) + ";");
             tbCar.Attributes["onclick"] = "chbManual.Checeked = !chbManual.Checeked";
-            ScriptManager1.RegisterAsyncPostBackControl(bAdd);
+            ToolkitScriptManager1.RegisterAsyncPostBackControl(bAdd);
             DA = new SqlDataAdapter();
             DS = new DataSet();
             DA.SelectCommand = new SqlCommand();
@@ -63,7 +63,7 @@ namespace CarWashManager
                 
                 ddlCar.DataBind();
 
-                DA.SelectCommand.CommandText = "select ID,PNAME from CWM..PRICELIST where IDCLASS = " + ddlClass.SelectedValue
+                /*DA.SelectCommand.CommandText = "select ID,PNAME from CWM..PRICELIST where IDCLASS = " + ddlClass.SelectedValue
                     + " order by PNAME";
                 DS = new DataSet();
                 DA.Fill(DS, "PRICE");
@@ -71,7 +71,7 @@ namespace CarWashManager
                 chblPrice.DataTextField = "PNAME";
                 chblPrice.DataValueField = "ID";
                 chblPrice.DataBind();
-                chblPrice.RepeatColumns = 2;
+                chblPrice.RepeatColumns = 2;*/
 
                 /*DA.SelectCommand.CommandText = "select ID,ASNAME from CWM..ADDITIONALSERVICE order by ASNAME";
                 DS = new DataSet();
@@ -99,7 +99,7 @@ namespace CarWashManager
             ddlCar.DataValueField = "ID";
             ddlCar.DataBind();
 
-            DA.SelectCommand.CommandText = "select ID,PNAME from CWM..PRICELIST where IDCLASS = " + ddlClass.SelectedValue
+            /*DA.SelectCommand.CommandText = "select ID,PNAME from CWM..PRICELIST where IDCLASS = " + ddlClass.SelectedValue
                 + " order by PNAME";
             DS = new DataSet();
             DA.Fill(DS, "PRICE");
@@ -107,7 +107,7 @@ namespace CarWashManager
             chblPrice.DataTextField = "PNAME";
             chblPrice.DataValueField = "ID";
             chblPrice.DataBind();
-            chblPrice.RepeatColumns = 2;
+            chblPrice.RepeatColumns = 2;*/
         }
 
         protected void chbManual_CheckedChanged(object sender, EventArgs e)
@@ -127,12 +127,14 @@ namespace CarWashManager
         protected void bAdd_Click(object sender, EventArgs e)
         {
             //bAdd.Enabled = false;
+            JOB J;
+            int special = 0;
             try
             {
                 lError.Text = "";
-                if (tbPlate.Text == "")
+                if (tbPlate.Text.Length < 6)
                 {
-                    lError.Text = "Введите государственный номер автомобиля!";
+                    lError.Text = "Государственный номер автомобиля должен содержать минимум 6 знаков!";
                     bAdd.Enabled = true;
 
                     return;
@@ -144,7 +146,7 @@ namespace CarWashManager
 
                     return;
                 }
-                bool ISPrice = false;
+                /*bool ISPrice = false;
                 foreach (ListItem c in chblPrice.Items)
                 {
                     if (c.Selected)
@@ -159,7 +161,7 @@ namespace CarWashManager
                     bAdd.Enabled = true;
 
                     return;
-                }
+                }*/
                 int y = ddlEmployees.SelectedIndex;
                 if (y == -1)
                 {
@@ -168,7 +170,7 @@ namespace CarWashManager
 
                     return;
                 }
-                JOB J = new JOB();
+                J = new JOB();
                 J.IDCLASS = int.Parse(ddlClass.SelectedValue);
                 if (chbManual.Checked)
                 {
@@ -186,24 +188,24 @@ namespace CarWashManager
                 J.IDPACKAGE = -1;
                 if (ddlSpecial.Text == "НЕТ")
                 {
-                    J.TOTALCOST = GetTotalCost();
+                    special = 0;
                 }
                 else
                 {
-                    J.TOTALCOST = 0;
+                    special = 1;
                 }
                 /*if (chbPlus_50.Checked)
                 {
                     J.PLUS_50 = true;
                 }*/
-                using (CWMEntities cwm = new CWMEntities(EnCon))
-                {
-                    cwm.AddToJOB(J);
 
-                    cwm.SaveChanges();
-                    AddNewPackage(J.ID);
-                    //AddNewAddPackage(J.ID);
-                }
+                //пока не сохраняем. сохраним на шаге 2
+                //using (CWMEntities cwm = new CWMEntities(EnCon))
+                //{
+                //    cwm.AddToJOB(J);
+
+                //    int i = cwm.SaveChanges();
+                //}
             }
             catch (Exception ex)
             {
@@ -211,7 +213,10 @@ namespace CarWashManager
                 bAdd.Enabled = true;
                 return;
             }
-            ScriptManager.RegisterStartupScript(this.UpdatePanel1, GetType(), "success", @"alert('Работа успешно добавлена!');location = ""Default.aspx""", true);
+            //ScriptManager.RegisterStartupScript(this.UpdatePanel1, GetType(), "success", @"alert('Работа успешно добавлена!');location = ""Default.aspx""", true);
+            Session.Add("JOB", J);
+            Session.Add("special", special);
+            ScriptManager.RegisterStartupScript(this.UpdatePanel1, GetType(), "success", "location = 'AddJobStep2.aspx'", true);
             //Response.Redirect(@"~\default.aspx");
             //bAdd.Enabled = true;
 
@@ -219,7 +224,7 @@ namespace CarWashManager
 
 
 
-        private int GetTotalCost()
+        /*private int GetTotalCost()
         {
 
             string prices = "";
@@ -260,39 +265,39 @@ namespace CarWashManager
             if (chbPlus_50.Checked)
             {
                 result = result + result / 2;
-            }*/
-            return result;
-        }
-
-        private void AddNewPackage(int idjob)
-        {
-            PACKAGE p;
-            using (CWMEntities cwm = new CWMEntities(EnCon))
-            {
-                foreach (ListItem c in chblPrice.Items)
-                {
-                    if (c.Selected)
-                    {
-                        p = new PACKAGE();
-                        p.IDJOB = idjob;
-                        p.IDPRICE = int.Parse(c.Value);
-                        if (ddlSpecial.Text == "НЕТ")
-                        {
-                            p.COST = GetCost(c.Value);
-                        }
-                        else
-                        {
-                            p.COST = 0;
-                        }
-                        cwm.AddToPACKAGE(p);
-
-                    }
-                }
-                cwm.SaveChanges();
             }
-            //CrystalReport1 cr = new CrystalReport1();
-            //cr.SetDataSource(
-        }
+            return result;
+        }*/
+
+        //private void AddNewPackage(int idjob)
+        //{
+        //    PACKAGE p;
+        //    using (CWMEntities cwm = new CWMEntities(EnCon))
+        //    {
+        //        foreach (ListItem c in chblPrice.Items)
+        //        {
+        //            if (c.Selected)
+        //            {
+        //                p = new PACKAGE();
+        //                p.IDJOB = idjob;
+        //                p.IDPRICE = int.Parse(c.Value);
+        //                if (ddlSpecial.Text == "НЕТ")
+        //                {
+        //                    p.COST = GetCost(c.Value);
+        //                }
+        //                else
+        //                {
+        //                    p.COST = 0;
+        //                }
+        //                cwm.AddToPACKAGE(p);
+
+        //            }
+        //        }
+        //        cwm.SaveChanges();
+        //    }
+        //    //CrystalReport1 cr = new CrystalReport1();
+        //    //cr.SetDataSource(
+        //}
         //private void AddNewAddPackage(int idjob)
         //{
         //    PACKAGEADDSERV PAS;
